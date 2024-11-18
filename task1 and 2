@@ -1,0 +1,31 @@
+import pandas as pd 
+import numpy as np
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import preprocessing
+from sklearn.metrics import confusion_matrix,accuracy_score
+from sklearn.model_selection import train_test_split
+
+gender=['male','male','male','male','female','female','female','female']
+height=[6.00,5.92,5.58,5.92,5.00,5.50,5.42,5.75]
+weight=[180,190,170,165,100,150,130,150]
+foot_size=[12,11,12,10,6,8,7,9]
+le=preprocessing.LabelEncoder()
+
+gender_encoded=le.fit_transform(gender)
+gender_encoded
+
+features=list(zip(height,weight,foot_size))
+features
+features_train,features_test,gender_encoded_train,gender_encoded_test=train_test_split(features,gender_encoded,test_size=0.2,random_state=42)
+
+predi=Classifier.predict(features)
+predi=Classifier.predict(features)
+
+accuracy=accurac.predict(features)y_score(gender_encoded,predi)
+accuracy
+
+new_entry=[[6.00 ,180,12]]
+prediction = classifier.predict(new_entry)
+prediction
+
+gender_encoded = np.append(gender_encoded, prediction)
